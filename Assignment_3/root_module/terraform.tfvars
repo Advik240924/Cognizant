@@ -1,9 +1,7 @@
-
-
 rg = {
   rg1 = {
     name       = "prod-app-rg"
-    location   = "west us 2"
+    location   = "East US"
     managed_by = "prod-devops-team"
     tags = {
       env = "prod-team"
@@ -15,7 +13,7 @@ vnet = {
   vnet1 = {
     name                = "prod-vnet"
     resource_group_name = "prod-app-rg"
-    location            = "west us 2"
+    location            = "East US"
     address_space       = ["10.0.0.0/16"]
     subnet = {
       subnet1 = {
@@ -37,7 +35,7 @@ vnet = {
 pip = {
   pip1 = {
     name                = "prodpip"
-    location            = "west us 2"
+    location            = "East US"
     resource_group_name = "prod-app-rg"
     allocation_method   = "Static"
   }
@@ -48,7 +46,7 @@ nsg = {
   nsg1 = {
     name                = "prod_nsg1"
     resource_group_name = "prod-app-rg"
-    location            = "west us 2"
+    location            = "East US"
   }
 }
 
@@ -56,7 +54,7 @@ vm = {
   vm1 = {
     name                = "prod_nsg1"
     resource_group_name = "prod-app-rg"
-    location            = "west us 2"
+    location            = "East US"
     nic_name            = "prod_nic1"
     nsg_name            = "prod_nsg1"
     ip_configuration = [{
@@ -121,3 +119,4 @@ automation_schedule = {
     start_time              = "2026-03-08T03:00:00Z"
   }
 }
+
